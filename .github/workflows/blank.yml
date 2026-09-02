@@ -44,4 +44,17 @@ jobs:
          echo "Plataforma de despliegue: ${{ env.plataform }}"
          echo "Region de despliegue: ${{ env.region}}"
          echo "Cuenta de despliegue: ${{ env.account}}"
-         
+
+        #InspeccionProfunda
+      - name: Debug del playload completo
+        run: echo "${{ toJSON(github.event) }}"
+
+        #Metadatos
+      - name: Mostrar Metadatos Basicos
+        run: |
+         echo "Usuario ejecutor: ${{ github.actor }}"
+         echo "Repositorio activo: ${{ github.repository }}"
+
+      
+
+
