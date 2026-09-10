@@ -1,5 +1,3 @@
-name: CI/CD Blue-Green
-
 # Controls when the workflow will run
 on:
   push:
@@ -10,6 +8,7 @@ jobs:
   ci: 
     name: Integracion continua 
     runs-on: ubuntu-latest
+
     steps: 
       - name: Descargar codigo  # Descarga el contenido del repositorio
         uses: actions/checkout@v4 # Checkout v4: acción oficial de GitHub
